@@ -93,7 +93,7 @@ body {
 
 .letter-panel p {
   margin: 0 auto 1rem;
-  font-size: 1.10rem;
+  font-size: 1.20rem;
   text-align: center;
   line-height: 1.45;
 }
@@ -344,6 +344,7 @@ body.scene-open .flowers * {
   left: 50%;
   bottom: 2rem;
   transform: translateX(-50%);
+  transition: transform 0.9s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
