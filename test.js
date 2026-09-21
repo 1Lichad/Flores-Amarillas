@@ -7,6 +7,7 @@ const letterPanel = document.getElementById('letterPanel');
 
 const setLetterOpen = (isOpen) => {
   document.body.classList.toggle('letter-open', isOpen);
+  letterToggle?.toggleAttribute('disabled', isOpen);
   letterToggle?.setAttribute('aria-expanded', String(isOpen));
   letterPanel?.setAttribute('aria-hidden', String(!isOpen));
 };
