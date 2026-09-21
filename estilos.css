@@ -1684,4 +1684,18 @@ body.scene-open .message {
 .container * {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media (max-width: 768px) {
+  .flowers,
+  body.scene-open .flowers {
+    margin: 0 auto;
+    transform: scale(0.65);
+  }
+
+  .letter-toggle {
+    right: 10px;
+    z-index: 999;
+  }
+}
+/*# sourceMappingURL=main.css.map */
