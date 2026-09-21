@@ -1698,6 +1698,7 @@ body.scene-open .message {
     z-index: 999;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
 
 @media (max-width: 768px) {
@@ -1770,7 +1771,7 @@ body.scene-open .message {
   }
 
   /* 3. Botón de la carta desplegable en la parte superior con flecha hacia abajo */
-  .panel-toggle, .right-button, [class*="button"] {
+  .panel-toggle, .right-button, .letter-toggle {
     position: fixed !important;
     top: 15px !important;
     left: 50% !important;
@@ -1796,5 +1797,66 @@ body.scene-open .message {
   .stars, .star, [class*="star"] {
     opacity: 1 !important;
     filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) !important;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  #cardScreen,
+  .card-screen {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  #cardScreen .card-button,
+  .card-screen .card-button {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: min(78vw, 360px) !important;
+    max-width: 360px !important;
+    transform: none !important;
+  }
+
+  .flowers,
+  body.scene-open .flowers {
+    position: relative !important;
+    inset: auto !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    transform: scale(0.52) !important;
+    transform-origin: bottom center !important;
+  }
+
+  .message {
+    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+    width: min(88vw, 380px) !important;
+  }
+
+  .letter-toggle {
+    top: 50% !important;
+    right: 10px !important;
+    left: auto !important;
+    width: 2.75rem !important;
+    height: 4.5rem !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .letter-panel,
+  body.letter-open .letter-panel {
+    top: 50% !important;
+    right: 0 !important;
+    left: auto !important;
+    width: min(88vw, 360px) !important;
+    max-height: 70vh !important;
+    transform: translate(100%, -50%) !important;
+  }
+
+  body.letter-open .letter-panel {
+    transform: translate(0, -50%) !important;
   }
 }
