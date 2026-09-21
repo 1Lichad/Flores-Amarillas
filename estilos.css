@@ -1761,7 +1761,7 @@ body.scene-open .message {
   }
 
   /* Elevar las flores para que sobresalgan por encima del cartel */
-  .flowers, div[class*="flower"] {
+  .flowers {
     position: fixed !important;
     bottom: 80px !important;
     left: 50% !important;
@@ -1824,11 +1824,15 @@ body.scene-open .message {
 
   .flowers,
   body.scene-open .flowers {
-    position: relative !important;
-    inset: auto !important;
-    width: auto !important;
-    margin: 0 auto !important;
-    transform: scale(0.52) !important;
+    position: fixed !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: 86px !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: 72vh !important;
+    margin: 0 !important;
+    transform: translateX(-50%) scale(0.52) !important;
     transform-origin: bottom center !important;
   }
 
@@ -1849,14 +1853,14 @@ body.scene-open .message {
   .letter-panel,
   body.letter-open .letter-panel {
     top: 50% !important;
-    right: 0 !important;
-    left: auto !important;
-    width: min(88vw, 360px) !important;
+    right: 5vw !important;
+    left: 5vw !important;
+    width: auto !important;
     max-height: 70vh !important;
-    transform: translate(100%, -50%) !important;
+    transform: translateY(-50%) !important;
   }
 
   body.letter-open .letter-panel {
-    transform: translate(0, -50%) !important;
+    transform: translateY(-50%) !important;
   }
 }
