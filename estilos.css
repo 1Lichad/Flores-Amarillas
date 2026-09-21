@@ -1734,3 +1734,44 @@ body.scene-open .message {
     z-index: 999;
   }
 }
+
+@media (max-width: 768px) {
+  /* 1. Mejorar el brillo y la visibilidad de las estrellas en mobile */
+  .stars, .star, [class*="star"] {
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9)) !important;
+  }
+
+  /* 2. Ubicar el cartel de 'Flores amarillas' en la parte superior y más alargado */
+  .card-screen, #cardScreen, .card-button {
+    position: absolute !important;
+    top: 5% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: auto !important;
+    width: 88vw !important;
+    max-width: 360px !important;
+    z-index: 10 !important;
+  }
+
+  /* 3. Ajustar la carta desplegable arriba de las flores para no taparlas */
+  .letter-container, .card, .ly-box, [class*="letter"], [class*="paper"] {
+    position: absolute !important;
+    top: 3% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90vw !important;
+    max-height: 48vh !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
+  }
+
+  /* 4. Escalar y posicionar las flores abajo en la pantalla */
+  .flowers {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.65) !important;
+    transform-origin: bottom center !important;
+  }
+}
