@@ -1699,3 +1699,38 @@ body.scene-open .message {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+@media (max-width: 768px) {
+  /* 1. Ajustar y centrar todo el contenedor principal */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  /* 2. Escalar proporcionalmente las flores para que quepan completas en pantalla */
+  .flowers {
+    transform: scale(0.55);
+    transform-origin: bottom center;
+    margin-bottom: 20px;
+  }
+
+  /* 3. Reubicar el cartel en la parte inferior centrada sin tapar tallos */
+  .card-screen, .container, #cardScreen {
+    position: relative !important;
+    bottom: 15px !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 85vw;
+    margin: 0 auto;
+  }
+
+  /* 4. Asegurar que el botón/flecha lateral derecho sea visible en pantalla pequeña */
+  .panel-toggle, .right-button, [class*="button"] {
+    right: 10px !important;
+    z-index: 999;
+  }
+}
